@@ -4,4 +4,8 @@
         <TargetFramework>net5.0</TargetFramework>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\Shared\PackIT.Shared.Abstractions\PackIT.Shared.Abstractions.csproj" />
+    </ItemGroup>
+
 </Project>
