@@ -23,6 +23,10 @@ namespace PackIT.Domain.Entities
             _items = items;
         }
         
+        private PackingList()
+        {
+        }
+        
         internal PackingList(PackingListId id, PackingListName name, Localization localization)
         {
             Id = id;
@@ -71,7 +75,7 @@ namespace PackIT.Domain.Entities
         {
             var item = _items.SingleOrDefault(i => i.Name == itemName);
 
-            if (item is null) throw new PackingItemNotFoundException();
+            if (item is null) throw new PackingItemNotFoundException(itemName);
 
             return item;
         }
